@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELOGIO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <div class="relogio">
+            <div class="ponteiro">
+                <span id="hora">
+                    H
+                </span>
+            </div>
+            <div>
+                <span class="doispontos">:</span>
+            </div>
+
+            <div class="ponteiro">
+                <span id="minuto">
+                    M
+                </span>
+            </div>
+            <div>
+                <span class="doispontos">:</span>
+            </div>
+
+            <div class="ponteiro">
+                <span id="segundo">
+                    S
+                </span>
+            </div>
+        </div>
+    </div>
+    <script>
+        iniciarRelogio();
+        setInterval( iniciarRelogio,1000);
+        
+        function iniciarRelogio(){
+            let data = new Date();
+            document.getElementById("hora").innerHTML=data.getHours();
+            document.getElementById("minuto").innerHTML=data.getMinutes();
+            document.getElementById("segundo").innerHTML=data.getSeconds();
+
+        }
+            
+    
+    </script>
+</body>
+</html>
